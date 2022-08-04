@@ -68,8 +68,8 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
     edgeArrowSize: 0.00001, // effectively removing the arrows. size has to be positive for intersection calculation uses.
     gridSpacing: 36,
     layoutEngineType: 'None',
-    maxZoom: 3,
-    minZoom: 0.15,
+    maxZoom: 2,
+    minZoom: 0.1,
     nodeSize: 154,
     nodeWidth: 154,
     nodeHeight: 154,
