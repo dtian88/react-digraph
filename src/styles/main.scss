@@ -69,8 +69,6 @@ $button-size: 31px;
   }
 
   .edge {
-    color: $light-color;
-    stroke: $primary-color;
     stroke-width: 2px;
     marker-end: url(#end-arrow);
     cursor: pointer;
@@ -91,8 +89,6 @@ $button-size: 31px;
     }
 
     &.selected {
-      color: $primary-color;
-      stroke: $primary-color;
 
       .edge-text {
         fill: $light-color;

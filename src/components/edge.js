@@ -48,6 +48,7 @@ type IEdgeProps = {
 };
 
 function Edge({
+  color,
   data,
   edgeTypes,
   viewWrapperElem,
@@ -111,7 +112,11 @@ function Edge({
       data-source={data.source}
       data-target={data.target}
     >
-      <g className={className}>
+      <g
+        className={className}
+        stroke={color || 'dodgerblue'}
+        color={isSelected ? color : 'white'}
+      >
         <path
           ref={edgePathRef}
           className="edge-path"

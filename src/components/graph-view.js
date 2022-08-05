@@ -1651,6 +1651,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
     const targetNodeMapNode = this.getNodeById(edge.target);
     const targetNode = targetNodeMapNode?.node;
     const targetPosition = edge.targetPosition;
+    const color = edge.color;
     const { edgeTypes, edgeHandleSize, nodeSize, nodeKey } = this.props;
 
     if (!sourceNode || (!targetNode && !edge.targetPosition)) {
@@ -1659,6 +1660,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
 
     return (
       <Edge
+        color={color}
         data={edge}
         edgeTypes={edgeTypes}
         edgeHandleSize={edgeHandleSize}

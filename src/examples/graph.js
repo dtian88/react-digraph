@@ -63,6 +63,7 @@ const sample: IGraph = {
       source: '1657546453211',
       target: '1657546465912',
       type: EMPTY_EDGE_TYPE,
+      color: 'red',
     },
     {
       // handleText: '5',
@@ -94,18 +95,21 @@ const sample: IGraph = {
       source: '1657546469298',
       target: '1657546585728',
       type: EMPTY_EDGE_TYPE,
+      color: 'green',
     },
     {
       // handleText: '54',
       source: '1657546605473',
       target: '1657546619208',
       type: EMPTY_EDGE_TYPE,
+      color: '#85AD99',
     },
     {
       // handleText: '54',
       source: '1657546619208',
       target: '1657546631619',
       type: EMPTY_EDGE_TYPE,
+      color: 'rgb(100,0,140)',
     },
     {
       // handleText: '24',
@@ -124,6 +128,7 @@ const sample: IGraph = {
       source: '1657546773316',
       target: '1657546631619',
       type: EMPTY_EDGE_TYPE,
+      color: 'hotpink',
     },
     {
       // handleText: '24',
@@ -136,6 +141,7 @@ const sample: IGraph = {
       source: '1657546476525',
       target: '1657546469298',
       type: EMPTY_EDGE_TYPE,
+      color: 'maroon',
     },
   ],
   nodes: [
