@@ -99,6 +99,7 @@ function Node({
   const nodeRef = useRef();
   const oldSibling = useRef();
   const position = useRef();
+  const moved = useRef(false);
 
   // We have to use a ref for x, y state because the handleDragEnd
   // function doesn't know about the updated values
@@ -172,10 +173,14 @@ function Node({
         shiftKey
       );
 
-      const onFinally = () =>
-        onNodeSelected(data, data[nodeKey], shiftKey, sourceEvent);
+      if (!moved.current) {
+        const onFinally = () =>
+          onNodeSelected(data, data[nodeKey], shiftKey, sourceEvent);
 
-      nodeUpdate.then(onFinally).catch(onFinally);
+        nodeUpdate.then(onFinally).catch(onFinally);
+      } else {
+        moved.current = false;
+      }
     },
     [onNodeUpdate, data, nodeKey, onNodeSelected]
   );
@@ -225,6 +230,7 @@ function Node({
         y: newState.y,
         pointerOffset: newState.pointerOffset,
       };
+      moved.current = true;
 
       onNodeMove(newState, data[nodeKey], shiftKey || draggingEdge.current);
     },
