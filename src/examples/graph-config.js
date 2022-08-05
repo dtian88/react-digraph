@@ -60,8 +60,18 @@ export const nodeTypes = [
 export const edgeTypes = [EMPTY_EDGE_TYPE, SPECIAL_EDGE_TYPE];
 
 const EmptyNodeShape = (
-  <symbol viewBox="0 0 154 154" width="154" height="154" id="emptyNode">
-    <circle cx="77" cy="77" r="76" />
+  // <symbol viewBox="0 0 154 154" width="154" height="154" id="emptyNode">
+  //   <circle cx="77" cy="77" r="76" />
+  // </symbol>
+  <symbol viewBox="0 0 98 98" width="98" height="98" id="other">
+    <circle cx="49" cy="49" r="48" stroke="transparent" />
+    <path
+      d="M49 97.02C22.52 97.02.98 75.48.98 49 .98 22.52 22.52.98 49 .98 75.47.98 97.02 22.52 97.02 49c0 26.48-21.54 48.02-48.02 48.02Z
+          m0-92.002C24.745 5.018 5.018 24.745 5.018 49S24.745 92.982 49.01 92.982c24.255 0 43.982-19.727 43.982-43.982C92.982 24.745 73.255 5.018 49 5.018Z"
+      fill="#000000"
+      stroke="transparent"
+      data-intersect-ignore="true"
+    />
   </symbol>
 );
 
@@ -70,7 +80,7 @@ const OtherShape = (
     <circle cx="49" cy="49" r="48" stroke="transparent" />
     <path
       d="M49 97.02C22.52 97.02.98 75.48.98 49 .98 22.52 22.52.98 49 .98 75.47.98 97.02 22.52 97.02 49c0 26.48-21.54 48.02-48.02 48.02Z
-    m0-92.002C24.745 5.018 5.018 24.745 5.018 49S24.745 92.982 49.01 92.982c24.255 0 43.982-19.727 43.982-43.982C92.982 24.745 73.255 5.018 49 5.018Z"
+         m0-92.002C24.745 5.018 5.018 24.745 5.018 49S24.745 92.982 49.01 92.982c24.255 0 43.982-19.727 43.982-43.982C92.982 24.745 73.255 5.018 49 5.018Z"
       fill="#000000"
       stroke="transparent"
       data-intersect-ignore="true"
@@ -79,14 +89,36 @@ const OtherShape = (
 );
 
 const SpecialShape = (
-  <symbol viewBox="-27 0 154 154" id="special" width="154" height="154">
-    <rect transform="translate(50) rotate(45)" width="109" height="109" />
+  <symbol viewBox="0 0 100 100" id="special" width="100" height="100">
+    <rect
+      transform="translate(50) rotate(45)"
+      width="70.7"
+      height="70.7"
+      fill="#000000"
+      stroke="transparent"
+    />
+    <rect
+      transform="translate(50) rotate(45) translate(4,4)"
+      width="62.7"
+      height="62.7"
+      stroke="transparent"
+      data-intersect-ignore="true"
+    />
   </symbol>
 );
 
 const PolyShape = (
-  <symbol viewBox="0 0 88 72" id="poly" width="88" height="88">
-    <path d="M 0 36 18 0 70 0 88 36 70 72 18 72Z" />
+  <symbol viewBox="0 0 100 87" id="poly" width="100" height="87">
+    <path
+      d="M0 43.301 25 0 75 0 100 43.301 75 86.603 25 86.603Z"
+      fill="#000000"
+      stroke="transparent"
+    />
+    <path
+      d="M4.619 43.3 27.309 4h45.38l22.69 39.3-22.69 39.3h-45.38Z"
+      stroke="transparent"
+      data-intersect-ignore="true"
+    />
   </symbol>
 );
 
@@ -103,7 +135,26 @@ const ComplexCircleShape = (
 
 const SkinnyShape = (
   <symbol viewBox="0 0 154 54" width="154" height="54" id="skinny">
-    <rect x="0" y="0" rx="2" ry="2" width="154" height="54" />
+    <rect
+      x="0"
+      y="0"
+      rx="3"
+      ry="3"
+      width="154"
+      height="54"
+      fill="#000000"
+      stroke="transparent"
+    />
+    <rect
+      x="4"
+      y="4"
+      rx="1.75"
+      ry="1.75"
+      width="146"
+      height="46"
+      stroke="transparent"
+      data-intersect-ignore="true"
+    />
   </symbol>
 );
 

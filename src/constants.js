@@ -10,10 +10,10 @@ export const DEFAULT_MAX_ZOOM = 2;
 export const DEFAULT_MIN_ZOOM = 0.1;
 export const SLIDER_STEPS = 200;
 export const NODE_TEXT_LINE_OFFSET = {
-  emptyNode: 105,
+  emptyNode: 75,
   other: 75,
-  special: 105,
-  poly: 67,
+  special: 75,
+  poly: 70,
   complexCircle: 80,
   skinny: 57,
   computer: 82,
