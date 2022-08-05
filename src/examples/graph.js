@@ -51,6 +51,7 @@ type IGraph = {
 
 let node_number = 0;
 let node_type = OTHER_TYPE;
+const edge_color = '';
 
 // NOTE: Edges must have 'source' & 'target' attributes
 // In a more realistic use case, the graph would probably originate
@@ -611,7 +612,11 @@ class Graph extends React.Component<IGraphProps, IGraphState> {
   }
 
   // Creates a new node between two edges
-  onCreateEdge = (sourceViewNode: INode, targetViewNode: INode) => {
+  onCreateEdge = (
+    sourceViewNode: INode,
+    targetViewNode: INode,
+    edgeColor: string
+  ) => {
     const graph = this.state.graph;
     // This is just an example - any sort of logic
     // could be used here to determine edge type
@@ -624,6 +629,7 @@ class Graph extends React.Component<IGraphProps, IGraphState> {
       source: sourceViewNode[NODE_KEY],
       target: targetViewNode[NODE_KEY],
       type,
+      color: edgeColor,
     };
 
     // Only add the edge when the source node is not the same as the target
@@ -861,6 +867,7 @@ class Graph extends React.Component<IGraphProps, IGraphState> {
             nodes={nodes}
             edges={edges}
             selected={selected}
+            edgeColor={edge_color}
             nodeTypes={NodeTypes}
             nodeSubtypes={NodeSubtypes}
             edgeTypes={EdgeTypes}

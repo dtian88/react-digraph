@@ -948,7 +948,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
   };
 
   createNewEdge() {
-    const { canCreateEdge, nodeKey, onCreateEdge } = this.props;
+    const { canCreateEdge, nodeKey, onCreateEdge, edgeColor } = this.props;
     const { edgesMap, edgeEndNode, hoveredNodeData } = this.state;
 
     if (!hoveredNodeData) {
@@ -973,7 +973,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
 
         // we expect the parent website to set the selected property to the new edge when it's created
         if (onCreateEdge) {
-          onCreateEdge(hoveredNodeData, edgeEndNode);
+          onCreateEdge(hoveredNodeData, edgeEndNode, edgeColor);
         }
       } else {
         // make the system understand that the edge creation process is done even though it didn't work.

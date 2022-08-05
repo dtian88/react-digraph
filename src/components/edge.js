@@ -18,6 +18,7 @@ export type IEdge = {
   source: string,
   target: string,
   type?: null | string,
+  color: string,
   handleText?: string,
   handleTooltipText?: string,
   label_from?: string,
@@ -33,6 +34,7 @@ export type ITargetPosition = {
 };
 
 type IEdgeProps = {
+  color: string,
   data: IEdge,
   edgeTypes: any, // TODO: create an edgeTypes interface
   edgeHandleSize?: number,
@@ -115,7 +117,7 @@ function Edge({
       <g
         className={className}
         stroke={color || 'dodgerblue'}
-        color={isSelected ? color : 'white'}
+        color={isSelected ? color || 'dodgerblue' : 'white'}
       >
         <path
           ref={edgePathRef}
