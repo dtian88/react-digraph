@@ -64,6 +64,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
     canCreateEdge: (startNode?: INode, endNode?: INode) => true,
     canSwapEdge: () => true,
     canDeleteSelected: () => true,
+    saveGraph: () => null,
     allowMultiselect: true,
     edgeArrowSize: 0.00001, // effectively removing the arrows. size has to be positive for intersection calculation uses.
     gridSpacing: 36,
@@ -545,6 +546,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
       onDeleteNode,
       onSelect,
       onDeleteEdge,
+      updateGraph,
     } = this.props;
 
     if (readOnly || (!selected?.nodes?.size && !selected?.edges?.size)) {
@@ -565,6 +567,7 @@ class GraphView extends React.Component<IGraphViewProps, IGraphViewState> {
 
       //onDeleteSelected && onDeleteSelected(selected);
       onSelect && onSelect({ nodes: null, edges: null });
+      updateGraph && updateGraph();
     }
   };
 
